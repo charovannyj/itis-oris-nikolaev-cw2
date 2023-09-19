@@ -8,14 +8,12 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.io.PrintWriter;
 
-@WebServlet(name = "helloServlet", urlPatterns = "/")
+@WebServlet(name = "helloServlet", urlPatterns = "/hello")
 public class HelloServlet extends HttpServlet {
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         PrintWriter writer = resp.getWriter();
-//        RequestBody reading
-//        String requestBody = req.getReader().lines().collect(Collectors.joining(System.lineSeparator()));
         writer.println("Hello!");
     }
 
