@@ -67,7 +67,7 @@ public class ChatClient {
         public void run() {
             try {
                 while (true) {
-                    String message = input.readLine();
+                    String message = input.readLine() + "\n";
                     chatClient.getApplication().appendMessage(message);
                 }
             } catch (IOException e) {

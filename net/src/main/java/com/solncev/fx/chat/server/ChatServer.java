@@ -42,7 +42,7 @@ public class ChatServer {
             }
 
             try {
-                c.getOutput().write(message);
+                c.getOutput().write(message + "\n");
                 c.getOutput().flush();
             } catch (IOException e) {
                 throw new RuntimeException(e);
