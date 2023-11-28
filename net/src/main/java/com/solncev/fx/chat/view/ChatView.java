@@ -20,12 +20,16 @@ public class ChatView extends BaseView {
         public void handle(KeyEvent event) {
             if (event.getCode() == KeyCode.ENTER) {
                 String username = getChatApplication().getUserConfig().getUsername();
-                String message = input.getText() + "\n";
+                String message = input.getText();
 
                 // send message
                 getChatApplication().getChatClient().sendMessage(username + ": " + message);
-
-                conversation.appendText("you: " + message);
+                conversation.appendText("bot: " + "write \"/help\" to get an instruction to use the bot" + "\n");
+                try {
+                    conversation.appendText("bot: " + new Commands().chooseCommand(message) + "\n");
+                } catch (Exception e) {
+                    throw new RuntimeException(e);
+                }
 
                 input.clear();
                 event.consume();

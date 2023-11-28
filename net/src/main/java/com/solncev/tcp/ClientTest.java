@@ -7,7 +7,7 @@ public class ClientTest {
         client.start("127.0.0.1", 5555);
 
         System.out.println(client.send("Hello"));
-        System.out.println(client.send("hellO"));
+        System.out.println(client.send("hell0"));
         System.out.println(client.send("1234"));
         System.out.println(client.send("bye"));
         // ?

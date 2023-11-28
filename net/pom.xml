@@ -10,6 +10,28 @@
     </parent>
 
     <artifactId>net</artifactId>
+    <!-- https://mvnrepository.com/artifact/org.openjfx/javafx-controls -->
+    <dependencies>
+        <dependency>
+            <groupId>org.openjfx</groupId>
+            <artifactId>javafx-fxml</artifactId>
+            <version>16</version>
+        </dependency>
+        <dependency>
+            <groupId>com.google.code.gson</groupId>
+            <artifactId>gson</artifactId>
+            <version>2.10.1</version>
+        </dependency>
+        <!-- https://mvnrepository.com/artifact/org.json/json -->
+        <dependency>
+            <groupId>org.json</groupId>
+            <artifactId>json</artifactId>
+            <version>20230618</version>
+        </dependency>
+
+    </dependencies>
+
+
 
     <properties>
         <maven.compiler.source>17</maven.compiler.source>

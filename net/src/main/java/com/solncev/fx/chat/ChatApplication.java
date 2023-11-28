@@ -11,6 +11,12 @@ import javafx.scene.layout.BorderPane;
 import javafx.stage.Stage;
 
 public class ChatApplication extends Application {
+    private Stage stage;
+
+    public Stage getStage() {
+        return stage;
+    }
+
 
     private UserConfig userConfig;
     private UserConfigView configView;
@@ -20,6 +26,7 @@ public class ChatApplication extends Application {
 
     @Override
     public void start(Stage primaryStage) throws Exception {
+        this.stage = primaryStage;
         primaryStage.setTitle("Chat");
         primaryStage.setOnCloseRequest(e -> System.exit(0));
         BaseView.setChatApplication(this);
