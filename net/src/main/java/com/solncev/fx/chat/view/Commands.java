@@ -1,5 +1,10 @@
 package com.solncev.fx.chat.view;
 
+import javafx.scene.Scene;
+import javafx.scene.layout.Pane;
+import javafx.scene.shape.Circle;
+import javafx.stage.Stage;
+
 import java.util.ArrayList;
 import java.util.Arrays;
 
@@ -29,6 +34,9 @@ public class Commands {
                 return new Currency().getCurrency(this.input);
             case ("/chat"):
                 getChatApplication().start(getChatApplication().getStage());
+                return "";
+            case ("/game"):
+                new SnakeGame().start(new Stage());
                 return "";
             default:
                 return DEFAULT_PHRASE;
